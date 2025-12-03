@@ -1,0 +1,71 @@
+# -----------------------------------------------------------------------------
+# SYSTEM OPERACYJNY I IDE
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# -----------------------------------------------------------------------------
+# NODE.JS / SVELTE (Frontend)
+# -----------------------------------------------------------------------------
+node_modules/
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example
+pnpm-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# -----------------------------------------------------------------------------
+# RUST / TAURI (Core)
+# -----------------------------------------------------------------------------
+# Folder budowania Rusta (może ważyć gigabajty)
+src-tauri/target/
+
+# Pliki generowane przez cargo (opcjonalne, ale zazwyczaj ignorowane w aplikacjach)
+Cargo.lock
+# UWAGA: Jeśli to aplikacja (nie biblioteka), często zaleca się NIE ignorować Cargo.lock.
+# Jeśli chcesz go śledzić, usuń linię powyżej.
+
+# -----------------------------------------------------------------------------
+# PYTHON (Backend / Skrypty)
+# -----------------------------------------------------------------------------
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Wirtualne środowiska (popularne nazwy)
+venv/
+.venv/
+env/
+.env/
+
+# Dystrybucja i budowanie (PyInstaller / Setuptools)
+build/
+dist/
+*.egg-info/
+.eggs/
+*.spec
+
+# Logi i błędy
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebooks (jeśli używasz)
+.ipynb_checkpoints
+
+# -----------------------------------------------------------------------------
+# TAURI SIDECAR (Zintegrowane binarki Pythona)
+# -----------------------------------------------------------------------------
+# Jeśli kompilujesz Pythona do pliku .exe (np. PyInstallerem) i wrzucasz
+# go do folderu bin, aby Tauri go widziało, nie chcesz tego commitować.
+
+!src-tauri/binaries/.gitkeep
